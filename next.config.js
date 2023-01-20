@@ -1,6 +1,16 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+module.exports = {
+  //trailingSlash je neophodan kao u react _redirect
+  trailingSlash: true,
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ["@svgr/webpack"],
+    });
 
-module.exports = nextConfig
+    return config;
+  },
+  images: {
+    unoptimized: true,
+  },
+};
+// process.env.NODE_ENV === 'production' || 'custom'
