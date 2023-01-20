@@ -9,7 +9,6 @@ module.exports = {
 
     return config;
   },
-  trailingSlash: true,
   images: {
     unoptimized: true,
   },
