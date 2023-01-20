@@ -1,6 +1,4 @@
 module.exports = {
-  //trailingSlash je neophodan kao u react _redirect
-  trailingSlash: true,
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
