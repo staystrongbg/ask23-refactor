@@ -1,8 +1,5 @@
 module.exports = {
-  experimental: {
-    appDir: true,
-  },
-  webpack(config) {
+  sswebpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
       use: ["@svgr/webpack"],
